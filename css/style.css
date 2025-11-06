@@ -1,0 +1,378 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+}
+
+/* Navigation */
+.navbar {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #d4a574;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #d4a574;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #f8f3e6 0%, #e8dccc 50%, #d4c4a8 100%);
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #d4a574;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s;
+    border: 2px solid #d4a574;
+}
+
+.cta-button:hover {
+    background: transparent;
+    color: #d4a574;
+}
+
+.cta-button.large {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+/* Featured Products */
+.featured {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #333;
+    font-size: 2rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card h3 {
+    color: #d4a574;
+    margin-bottom: 1rem;
+}
+
+/* Page Main Content */
+.page-main {
+    margin-top: 80px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-section, .about-section, .contact-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.menu-notice {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.menu-category {
+    margin-bottom: 3rem;
+}
+
+.menu-category h2 {
+    color: #d4a574;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.menu-items {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.menu-item {
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.menu-item h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.menu-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Contact Section */
+.contact-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.contact-options {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-note {
+    margin-top: 1rem;
+    color: #666;
+}
+
+.order-process, .order-policies {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.process-steps {
+    margin-left: 1.5rem;
+}
+
+.process-steps li, .order-policies li {
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-main {
+        padding: 1rem;
+    }
+}
+/* Ensure JFIF and PNG images display properly */
+ img[src*=".jpg"]
+img[src*=".png"] {
+    height: auto;
+    max-width: 100%;
+}
+
+/* Updated Products Grid - 2 columns */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Larger product images */
+.product-image {
+    width: 100%;
+    height: 250px; /* Increased height */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Updated Menu Layout - 2 columns */
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.menu-item {
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Larger menu images */
+.menu-image {
+    width: 100%;
+    height: 280px; /* Increased height */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 3px solid #f0f0f0;
+}
+
+/* Responsive: Switch to 1 column on mobile */
+@media (max-width: 768px) {
+    .products-grid,
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-image {
+        height: 200px;
+    }
+    
+    .menu-image {
+        height: 220px;
+    }
+}
+
+/* Logo Styles */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    height: 50px; /* Adjust based on your logo size */
+    width: auto;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d4a574;
+}
+
+/* Remove the old logo style */
+/* Delete or comment out this line: */
+/* .logo { color: #d4a574; font-size: 1.5rem; font-weight: bold; } */
+
+/* Responsive logo for mobile */
+@media (max-width: 768px) {
+    .logo {
+        height: 40px;
+    }
+    
+    .logo-text {
+        font-size: 1.2rem;
+    }
+    
+    .logo-container {
+        gap: 0.5rem;
+    }
+}
+/* Make sure all images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
